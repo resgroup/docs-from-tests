@@ -1,28 +1,14 @@
 environment:
-  MINICONDA: C:\Miniconda3
   matrix:
     - PYTHON_VERSION: "3.7"
       PYTHON_ARCH: "64"
 
-init:
-  - "ECHO %PYTHON_VERSION%"
-
 install:
-  - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - set PYTHONPATH=C:\projects\res-python-project-template
-  - cmd: conda config --set always_yes yes --set changeps1 no
-  - cmd: conda info --all
-  - cmd: conda env create -f environment.yml
 
 build: false
 
 test_script:
-  - cmd: conda info -a
-  - cmd: dir
-  - cmd: cd C:\projects\res-python-project-template
-  - cmd: dir
-  - cmd: activate res_your_enviroment_name
-  - cmd: conda list
   - cmd: pytest --junitxml=test-output.xml
   # the below is a nicety, it populates the "tests" tab of the appveyor build page,
   # it requires "--junitxml=test-output.xml" to be added to the pytest command
