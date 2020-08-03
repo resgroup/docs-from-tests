@@ -5,11 +5,12 @@ environment:
 
 install:
   - set PYTHONPATH=C:\projects\res-python-project-template
+  - pip install requirements.txt
 
 build: false
 
 test_script:
-  - cmd: pytest --junitxml=test-output.xml
+  - cmd: pytest
   # the below is a nicety, it populates the "tests" tab of the appveyor build page,
   # it requires "--junitxml=test-output.xml" to be added to the pytest command
   - ps: ./tests/upload_test_results_to_appveyor.ps1
