@@ -8,28 +8,24 @@ You can choose to ignore specific functions, and private functions, to make the 
 
 The diagram is useful documentation, and will stay up to date as it is automatically generated. Hopefully it will encourage us to have useful diagrams in the repo, with the appropriate levels of detail, which in turn will encourage us to structure the code well so it produces good diagrams, andto  have tests at these levels of detail. 
 
-### Build Status
+## Build Status
 
-TODO: add build, code coverage and code climate
+[![Build status](https://ci.appveyor.com/api/projects/status/h22ya2rrsl8bc4pt?svg=true)](https://ci.appveyor.com/project/RESSoftwareTeam/docs-from-tests)
 
-### Environment Management
-
-TODO: specify dependencies in requirements.txt
-
-### Contributing
+## Contributing
 
 - Use [PEP-0008](https://www.python.org/dev/peps/pep-0008/)
 - Please open up an Issue for new work, where any discussion can take place, and then submit a pull request to fix the issue.
 
-### Usage
+## Usage
 
 TODO: add example usage
 
-### Running tests
+## Running tests
 
-TODO: add some tests
+`pytest`
 
-### Project Champion
+## Project Champion
 
 The champion for this a repo is [Cedd Burge](cedd.burge@res-group.com) who is accountable for:
 
