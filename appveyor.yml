@@ -8,8 +8,6 @@ install:
   - pip install tox
   - set PYTHONPATH=C:\projects\docs_from_tests
 
-build: false
-
 test_script:
   - tox
   # the below is a nicety, it populates the "tests" tab of the appveyor build page,
