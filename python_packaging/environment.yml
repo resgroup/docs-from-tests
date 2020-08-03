@@ -1,0 +1,9 @@
+# It is very important that you change the name of your conda environment below to something specific to your project
+# if you use the name below it will lead to environment name clashes.
+name: res_your_enviroment_name
+channels:
+  - defaults
+dependencies:
+- python>=3.7
+- pytest
+

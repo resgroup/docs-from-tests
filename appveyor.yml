@@ -1,0 +1,39 @@
+environment:
+  MINICONDA: C:\Miniconda3
+  matrix:
+    - PYTHON_VERSION: "3.7"
+      PYTHON_ARCH: "64"
+
+init:
+  - "ECHO %PYTHON_VERSION%"
+
+install:
+  - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+  - set PYTHONPATH=C:\projects\res-python-project-template
+  - cmd: conda config --set always_yes yes --set changeps1 no
+  - cmd: conda info --all
+  - cmd: conda env create -f environment.yml
+
+build: false
+
+test_script:
+  - cmd: conda info -a
+  - cmd: dir
+  - cmd: cd C:\projects\res-python-project-template
+  - cmd: dir
+  - cmd: activate res_your_enviroment_name
+  - cmd: conda list
+  - cmd: pytest --junitxml=test-output.xml
+  # the below is a nicety, it populates the "tests" tab of the appveyor build page,
+  # it requires "--junitxml=test-output.xml" to be added to the pytest command
+  - ps: ./tests/upload_test_results_to_appveyor.ps1
+
+# the below means that normally only the person that broke the build gets an email, instead of everybody
+notifications:
+  - provider: Email
+    to:
+      - '{{commitAuthorEmail}}'
+    subject: 'Build {{status}}'
+    on_build_success: false
+    on_build_failure: true
+    on_build_status_changed: false
