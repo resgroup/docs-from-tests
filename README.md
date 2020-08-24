@@ -19,11 +19,12 @@ The diagram is useful documentation, and will stay up to date as it is automatic
 
 ## Usage
 
-TODO: add example usage
+You can see an example of instrumenting a test at [tests\test_hello_world.py](tests\test_hello_world.py)
 
 ## Running tests
 
-`pytest`
+- `set pythonpath=<path to root of this repo>`
+- `pytest`
 
 ## Project Champion
 
