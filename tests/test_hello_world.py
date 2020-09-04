@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from docs_from_tests.instrument_call_hierarchy import instrument_and_import_package, instrument_and_import_module, initialise_call_hierarchy, finalise_call_hierarchy
-from samples.hello_world_combiner import HelloWorldCombiner
+from samples.hello_world_combiner import HelloWorldCombiner # is this import required?
 
 # you can import and instrument entire packages / folders at once like this
 instrument_and_import_package(os.path.join(Path(__file__).parent.absolute(), '..', 'samples'), 'samples')
@@ -31,7 +31,7 @@ def test_hello_world():
     sequence_diagram_filename = os.path.join(os.path.dirname(__file__), '..', 'doc', 'top-level-sequence-diagram.md')
     Path(sequence_diagram_filename).write_text(sequence_diagram)
 
-    # this wouldn't be required as a user of this package, but is helpful here 
+    # this wouldn't be required as a user of this package, but is helpful here, 
     # to test that the generated markdown is correct
     assert sequence_diagram == """This is a mermaid diagram, you may need to install a [Browser Plugin](https://github.com/BackMarket/github-mermaid-extension) or [VsCode extension](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) or similar to view it.
 
@@ -49,6 +49,7 @@ sequenceDiagram
 ```
 """
 
+# this is the original / source test
 def _test_hello_world():
     assert HelloWorldCombiner().combine() == 'Hello world'
 
