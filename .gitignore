@@ -108,3 +108,4 @@ venv.bak/
 
 # VS Code
 .vscode/
+test-output.xml
