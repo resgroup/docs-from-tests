@@ -34,7 +34,7 @@ for:
     only:
       - master
   deploy_script:
-    - python -m twine upload -u __token__ -p ${pypitoken} --repository-url https://test.pypi.org/legacy/ --skip-existing dist/*
+    - python -m twine upload -u __token__ -p %pypitoken% --repository-url https://test.pypi.org/legacy/ --skip-existing dist/*
 
 # the below means that normally only the person that broke the build gets an email, instead of everybody
 notifications:
