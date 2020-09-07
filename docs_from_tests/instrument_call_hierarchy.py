@@ -34,7 +34,7 @@ def instrument_module(module):
                 if class_object.__module__ == module.__name__:
                     #print(class_name)
                     for method_name, method in inspect.getmembers(class_object):
-                        if method_name == '__init__' or not method_name.startswith('_'):
+                        if inspect.ismethod(method) or inspect.isfunction(method):
                             #print(f'{class_name}.{method_name}')
                             setattr(class_object, method_name, _document_function_calls(f'{class_name}.{method_name}', method))
 
