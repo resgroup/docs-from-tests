@@ -1,7 +1,12 @@
 import os
 from pathlib import Path
-from docs_from_tests.instrument_call_hierarchy import instrument_and_import_package, instrument_and_import_module, initialise_call_hierarchy, finalise_call_hierarchy
-from samples.hello_world_combiner import HelloWorldCombiner # is this import required?
+from docs_from_tests.instrument_call_hierarchy import (
+    instrument_and_import_package,
+    instrument_and_import_module,
+    initialise_call_hierarchy,
+    finalise_call_hierarchy
+)
+from samples.hello_world_combiner import HelloWorldCombiner
 
 # you can import and instrument entire packages / folders at once like this
 instrument_and_import_package(os.path.join(Path(__file__).parent.absolute(), '..', 'samples'), 'samples')
