@@ -2,7 +2,7 @@ environment:
   matrix:
   - TOXENV: py37
   pypitoken:
-    secure: ysv4opRvqiJ4cKX7VBun/DPGNXCQ6pYtVLV0hW1shtEaGpxk5MgCwC9SYsmC/OQRQufvwIAQ5lOPWTRfYuOOtQFj0DrxIlwV/34ELSfQCNsUbJ/EhMtXMtQp7TDClxmetuCJChxb0nm3JZv5GAIfnri8cq9zF2CPGUhYm0X10ir4utGWp7E1m5Wt2UkDs2L4VaK8hdyD2DKArxW7vGOp7K0N9Y5GwTXMcqD3wuKC9nXlS5R3kL8LdgqpuMkalOWP
+    secure: Y9Yz4iNYJiWdoFrO7hxMyaDrWAq2E2rWaXGX8iMdCNLJkduZ0Abn/hw5/b8DjyFOQXNo9ddhidb8exiAyLPUmUfRv2qqxzohMLk2Cxg57Tmbvmm11gzqnZW/mbunzIFz9MfA8JEiYkIi58epgFK3d6dPxgEt/tjBu529hCUkvkpznQENy5RIWGlcFiaY7Q/P1AEZHJZ45YVEjwK9fYTZVgP7ubUJ69xSg3/WcaRdmrg=
 
 install:
   - pip install tox
@@ -34,7 +34,7 @@ for:
     only:
       - master
   deploy_script:
-    - python -m twine upload -u __token__ -p %pypitoken% --repository-url https://test.pypi.org/legacy/ --skip-existing dist/*
+    - python -m twine upload -u __token__ -p %pypitoken% --skip-existing dist/*
 
 # the below means that normally only the person that broke the build gets an email, instead of everybody
 notifications:
