@@ -8,7 +8,7 @@ from docs_from_tests.instrument_call_hierarchy import (
 )
 from samples.hello_world_combiner import HelloWorldCombiner
 
-# you can import and instrument entire packages / folders at once like this
+# you can instrument entire packages / folders at once like this
 instrument_and_import_package(os.path.join(Path(__file__).parent.absolute(), '..', 'samples'), 'samples')
 # You can instrument individual modules like this
 # instrument_and_import_module('tests.blah')
