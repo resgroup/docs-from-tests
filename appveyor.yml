@@ -2,7 +2,7 @@ environment:
   matrix:
   - TOXENV: py37
   pypitoken:
-    secure: Y9Yz4iNYJiWdoFrO7hxMyaDrWAq2E2rWaXGX8iMdCNLJkduZ0Abn/hw5/b8DjyFOQXNo9ddhidb8exiAyLPUmUfRv2qqxzohMLk2Cxg57Tmbvmm11gzqnZW/mbunzIFz9MfA8JEiYkIi58epgFK3d6dPxgEt/tjBu529hCUkvkpznQENy5RIWGlcFiaY7Q/P1AEZHJZ45YVEjwK9fYTZVgP7ubUJ69xSg3/WcaRdmrg=
+    secure: Y9Yz4iNYJiWdoFrO7hxMyW67XB7T5fBkG47M0+wmDKUnA3rj+Z0MKjJ2d9pYEiJG7ii5MsEeLxwpppvPhFI6tJHTbMnaEXyctOmbG4+CtxTHva5CylVkhfeWHp7J2zp4x3tqms0Dg1mutRo2CZG1cf5T4HbMFDZaTmyZoS1O9Zkpwnp+W3AoR248b/PfKpf9BKIn/x5FrC7ofw1fv0EJCWm/B/O++1cV3svul48wPo6pcUbIMCTfN3omrEbgnRCv05hXuTCb16yBm3M/SJhaOXXjNjDrl2230l3JdlOtR3g=
 
 install:
   - pip install tox
