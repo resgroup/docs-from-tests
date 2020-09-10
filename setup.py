@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="docs_from_tests",
-    version="0.0.1",
+    version="0.0.2",
     author="RES",
     author_email="cedd.burge@res-group.com",
-    description="A short description of your package",
+    description="Generate mermaid / markdown sequence diagrams from your tests",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/resgroup/docs-from-tests",
