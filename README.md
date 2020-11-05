@@ -1,6 +1,6 @@
 # docs-from-tests
 
-This python package contains functions to instrument your code / tests to create sequence diagrams (in markdown / mermaid) as the tests run.  
+This python package contains functions to instrument your code / tests to create sequence diagrams (in markdown / mermaid) as the tests run. Please see [How to Create Documentation from Your Python Tests](https://www.freecodecamp.org/news/how-to-create-documentation-from-your-python-tests/) for more details.
 
 The sequence diagrams show the runtime call hierachy of the code. They are saved as files in the repository, which you should check in. 
 
